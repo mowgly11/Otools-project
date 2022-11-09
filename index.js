@@ -119,7 +119,9 @@ app.get("/geolocation", async (req, res) => {
 app.post("/geolocation", (req, res) => {
     const ip = req.body.ip;
     try {
-        satelize.satelize({ ip: ip }, (err, payload) => {
+        satelize.satelize({
+            ip: ip
+        }, (err, payload) => {
             if (err) return res.send({
                 error: "An Error Just Happened." + err,
                 ip: "",
