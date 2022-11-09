@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domain Checker</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <h1>Domain Checker</h1>
+  <p id="error-flash-domain"><%= error %></p>
+  <form action="/domain-checker" method="POST" id="post-form-domain">
+    <label for="domain">Domain</label>
+    <input type="text" name="domain" id="domain" required>
+    <button type="submit">Search</button>
+  </form><br><br>
+
+  <div id="result-area">
+    <p id="res1"><%= domainName %></p>
+    <p id="res2"><%= creationDate %></p>
+    <p id="res3"><%= expirationDate %></p>
+    <p id="res4"><%= provider %></p>
+    <p id="res5"><%= providerURL %></p>
+    <p id="res6"><%= registryId %></p>
+  </div>
+</body>
+
+</html>
