@@ -34,7 +34,7 @@ app.post("/random-bytes", async (req, res) => {
     const count = req.body.randoms;
     const result = await randomLetters(count);
 
-    if (result === "No Results") return res.send({ error: "Invalid Number/Number is bigger than 20000", randoms: "" });
+    if (result === "No Results") return res.send({ error: "Invalid Number/Number is higher than 20000", randoms: "" });
 
     res.send({ randoms: result, error: "" });
 });
