@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <h1>Text Reverse</h1>
+  <p id="error-flash-reverse">
+    <%= error %>
+  </p>
+  <form id="post-form-reverse" action="/text-reverse" method="POST">
+    <label for="reverse">Text Reverse</label>
+    <textarea style="resize: none; cursor: text;" type="text" id="reverse" name="reverse" required></textarea>
+    <button type="submit">Reverse</button>
+  </form><br><br>
+
+  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"><%= result %></textarea>
+</body>
+
+</html>

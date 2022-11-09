@@ -62,4 +62,21 @@ $(document).ready(() => {
             }
         });
     });
+    $("#post-form-reverse").on("submit", (event) => {
+        event.preventDefault();
+        const value = $("#reverse").val();
+
+        $.ajax({
+            url: "/text-reverse",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                reverse: value
+            }),
+            success: (res) => {
+                $("#error-flash-ip").html(`${res.error}`);
+                $("#result-area").html(`${res.result}`);
+            }
+        });
+    });
 });

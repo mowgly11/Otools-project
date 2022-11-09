@@ -154,3 +154,14 @@ app.post("/geolocation", (req, res) => {
         });
     }
 });
+
+/* Text Reverse Routes */
+
+app.get("/text-reverse", (req, res) => {
+    res.render("reverse.ejs", { error: "", result: "" });
+});
+
+app.post("/text-reverse", (req, res) => {
+    const text = req.body.reverse;
+    res.send({ error: "", result: text.split("").reverse().join("") });
+});
