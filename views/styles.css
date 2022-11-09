@@ -7,10 +7,137 @@
     --color-4: white;
 }
 
+body {
+    background: linear-gradient(to top, var(--color-1), var(--color-2));
+    height: 100vh;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "Jost", sans-serif;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    color: var(--color-3);
+    cursor: default;
+}
+
+.page-header h1 {
+    font-size: 3em;
+}
+
+#gear {
+    transition: 1.5s;
+}
+
+#gear:hover {
+    transform: rotate(360deg);
+}
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.introduction h2 {
+    color: var(--color-3);
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.links {
+    margin: 30px 0;
+}
+
+#viewmore {
+    color: #e6975e;
+    text-decoration: none;
+    padding: 7px 15px;
+    font-weight: 600;
+    background: linear-gradient(to left, var(--color-1), var(--color-2));
+    border-radius: 8px;
+    border: #e6975e solid 3px;
+    transition: 0.5s;
+    margin: 20px 0; 
+}
+
+#viewmore:hover {
+    color: #fff;
+    border: #fff solid 3px;
+}
+
+#github {
+    color: #e6975e;
+    text-decoration: none;
+    padding: 7px 15px;
+    font-weight: 600;
+    background: linear-gradient(to left, var(--color-1), var(--color-2));
+    border-radius: 8px;
+    border: #e6975e solid 3px;
+    transition: 0.5s;
+    margin: 20px 0; 
+}
+
+#github:hover {
+    color: #fff;
+    border: #fff solid 3px;
+}
+
+.cards {
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    background: var(--color-1);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(to top, var(--color-1), var(--color-2));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    margin: 20px;
+    transition: 0.5s;
+    border-radius: 8px;
+    border: var(--color-3) solid 3px;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.card:hover {
+    box-shadow: 1px 2px 5px black;
+    border: white solid 3px;
+}
+
+.top {
+    color: var(--color-3);
+    font-size: 5em;
+    transition: 0.5s;
+}
+
+.top:hover {
+    color: white;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: var(--color-3);
+    transition: 0.5s;
+}
+
+.bottom a:hover {
+    color: white;
 }

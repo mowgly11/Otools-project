@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTools</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTools</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/f334197832.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Welcome to Otools.</h1>
-    <a href="/geolocation">IP Geolocation Finder</a><br><br>
-    <a href="/random-bytes">Random Bytes Generator</a><br><br>
-    <a href="/domain-checker">Domain Checker</a>
+  <header class="page-header">
+    <h1>OTO</h1>
+    <h1 id="gear"><i class="fa-sharp fa-solid fa-gear"></i></h1>
+    <h1>LS</h1>
+  </header>
+  <section class="main-section">
+    <div class="introduction">
+      <h2>Open Source tools you can use on your daily uses.</h2>
+      <div class="links">
+        <a id="viewmore" href="#cards">View More</a>
+        <a id="github" href="#github" onclick="window.open('https:/\/github.com/mowgly11/otools-project')">Github Repo</a>
+      </div>
+    </div>
+    <div class="cards" id="cards">
+      <div class="card" onclick="window.open('/geolocation')">
+        <div class="top">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="bottom">
+          <a href="/geolocation">IP Geolocation Finder</a>
+        </div>
+      </div>
+      <div class="card" onclick="window.open('/random-bytes')">
+        <div class="top">
+          <i class="fa-solid fa-key"></i>
+        </div>
+        <div class="bottom">
+          <a href="/random-bytes">Random Bytes Generator</a>
+        </div>
+      </div>
+      <div class="card" onclick="window.open('/domain-checker')">
+        <div class="top">
+          <i class="fa-sharp fa-solid fa-sitemap"></i>
+        </div>
+        <div class="bottom">
+          <a href="/domain-checker">Domain Checker</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
