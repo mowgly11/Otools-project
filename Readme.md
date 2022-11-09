@@ -19,4 +19,4 @@ Otools is a new projects that allows you to use multiple open source online tool
 * `satelize` npm package, used for IP Geolocation Checking. **https://www.npmjs.com/package/satelize**
 * `crypto` built-in module in nodejs, used for the random bytes tool.
 
-contributions are welcomed :)
+pull requests are welcomed :)
