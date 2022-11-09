@@ -5,7 +5,7 @@
 Otools is a new projects that allows you to use multiple open source online tools that will help you on your researches and scans.
 
 
-Currently in version 0.1, Otools has only 3 tools:
+<h3>Available Tools:</h3>
 
 * `Random Bytes Generator`, it generate random bytes for multiple uses like JWT secret...
 * `Domain Checker`, Checks any domain's creation date, expiration date, registry id and provider.
