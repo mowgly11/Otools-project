@@ -79,4 +79,21 @@ $(document).ready(() => {
             }
         });
     });
+    $("#post-form-words").on("submit", (event) => {
+        event.preventDefault();
+        const value = $("#words").val();
+
+        $.ajax({
+            url: "/words-counter",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                words: value
+            }),
+            success: (res) => {
+                $("#error-flash-words").html(`${res.error}`);
+                $("#result-area").html(`${res.result} words`);
+            }
+        });
+    });
 });

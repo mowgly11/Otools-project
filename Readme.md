@@ -10,7 +10,8 @@ Otools is a new projects that allows you to use multiple open source online tool
 * `Random Bytes Generator`, it generate random bytes for multiple uses like JWT secret...
 * `Domain Checker`, Checks any domain's creation date, expiration date, registry id and provider.
 * `IP Geolocation`, Checks and IPv4's Location, continent, city, and also gives a google maps link to the ip's exact location.
-* `Text Reverse`, Reverse any text you pass for it (example: Hello -> olleH)
+* `Text Reverse`, Reverse any text you pass for it (example: Hello -> olleH).
+* `Words Counter`, Takes a string and returns how many words are in it.
 
 
 <h3>Technologies and liraries</h3>

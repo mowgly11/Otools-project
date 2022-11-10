@@ -165,3 +165,15 @@ app.post("/text-reverse", (req, res) => {
     const text = req.body.reverse;
     res.send({ error: "", result: text.split("").reverse().join("") });
 });
+
+/* Words Counter */
+
+app.get("/words-counter", (req, res) => {
+    res.render("wordscount.ejs", { error: "", result: "" });
+});
+
+app.post("/words-counter", (req, res) => {
+    let text = req.body.words;
+    text = text.split(" ").filter(i => String(i).trim()).length;
+    res.send({ error: "", result: text });
+});
