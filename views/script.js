@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    
     $("#post-form-domain").on("submit", (event) => {
         event.preventDefault();
         const value = $("#domain").val();
@@ -23,6 +24,7 @@ $(document).ready(() => {
             }
         });
     });
+
     $("#post-form-bytes").on("submit", (event) => {
         event.preventDefault();
         const value = $("#randoms").val();
@@ -40,6 +42,7 @@ $(document).ready(() => {
             }
         });
     });
+
     $("#post-form-ip").on("submit", (event) => {
         event.preventDefault();
         const value = $("#ip").val();
@@ -62,6 +65,7 @@ $(document).ready(() => {
             }
         });
     });
+
     $("#post-form-reverse").on("submit", (event) => {
         event.preventDefault();
         const value = $("#reverse").val();
@@ -79,6 +83,7 @@ $(document).ready(() => {
             }
         });
     });
+
     $("#post-form-words").on("submit", (event) => {
         event.preventDefault();
         const value = $("#words").val();
