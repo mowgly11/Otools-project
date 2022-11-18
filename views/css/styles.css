@@ -14,17 +14,17 @@ body {
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #cb68a9, #170376); 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #cb68a9, #170376);
+}
 
 * {
     margin: 0;
@@ -55,64 +55,10 @@ body {
     transform: rotate(360deg);
 }
 
-.introduction {
-    display: flex;
-    justify-content: center;
-    height: 85vh;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-.introduction h2 {
-    color: var(--color-3);
-    font-weight: 400;
-    font-size: 2em;
-}
-
-.links {
-    margin: 30px 0;
-}
-
-#viewmore {
-    color: #e6975e;
-    text-decoration: none;
-    padding: 7px 15px;
-    font-weight: 600;
-    background: linear-gradient(to left, var(--color-1), var(--color-2));
-    border-radius: 8px;
-    border: #e6975e solid 3px;
-    transition: 0.5s;
-    margin: 20px 0; 
-}
-
-#viewmore:hover {
-    color: #fff;
-    border: #fff solid 3px;
-}
-
-#github {
-    color: #e6975e;
-    text-decoration: none;
-    padding: 7px 15px;
-    font-weight: 600;
-    background: linear-gradient(to left, var(--color-1), var(--color-2));
-    border-radius: 8px;
-    border: #e6975e solid 3px;
-    transition: 0.5s;
-    margin: 20px 0; 
-}
-
-#github:hover {
-    color: #fff;
-    border: #fff solid 3px;
-}
-
 .cards {
     padding: 3em;
     display: flex;
     flex-direction: row;
-    background: var(--color-1);
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -165,17 +111,71 @@ body {
     justify-content: center;
 }
 
+#result {
+    display: block;
+}
+
+#text-results {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    left: 50%;
+    margin-top: 20px;
+    border-radius: 18px;
+    transform: translate(-50%);
+    height: 100px;
+    width: 200px;
+    background: #e6975e;
+}
+
+#tool-link {
+    color: #170376;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+#tool-link:hover {
+    color: #cb68a9;
+}
+
 #search-form {
     display: flex;
     flex-direction: column;
-} 
-
-#search {
-    width: 100%;
 }
 
-#results {
-    width: 150px;
-    background-color: red;
-    height: 50px;
+#search-form input {
+    color: #170376;
+    background: #e6975e;
+    border: none;
+    padding: 7px 1em;
+    border-radius: 6px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#search-form div {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#search-form button {
+    border-radius: 60px;
+    font-size: 1em;
+    padding: 3px 20px;
+    border: none;
+    font-weight: 600;
+    color: #e6975e;
+    border: #e6975e solid 3px;
+    cursor: pointer;
+    background: linear-gradient(to left, var(--color-1), var(--color-2));
+    transition: 0.5s;
+}
+
+#search-form button:hover {
+    border: 3px white solid;
+    color: white;
 }

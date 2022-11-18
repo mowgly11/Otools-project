@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OTools</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f334197832.js" crossorigin="anonymous"></script>
+  <script type="module" src="./script/script.js" defer></script>
 </head>
 
 <body>
@@ -16,20 +18,23 @@
     <h1 id="gear"><i class="fa-sharp fa-solid fa-gear"></i></h1>
     <h1>LS</h1>
   </header>
+
   <div id="search-bar">
     <form id="search-form">
-      <input type="text" name="search" id="search">
-      <div id="results"></div>
+      <input type="text" placeholder="Search Here" name="search" id="search">
+      <div>
+        <button type="submit">Search</button>
+      </div>
     </form>
   </div>
-  <section class="main-section">
-    <div class="introduction">
-      <h2>Open Source tools you can use on your daily uses.</h2>
-      <div class="links">
-        <a id="viewmore" href="#cards">View More</a>
-        <a id="github" href="#github" onclick="window.open('https:/\/github.com/mowgly11/otools-project')">Github Repo</a>
-      </div>
+
+  <div id="result">
+    <div id="text-results">
+      <a id="tool-link" href="#"></a>
     </div>
+  </div>
+
+  <section class="main-section">
     <div class="cards" id="cards">
       <div class="card" onclick="window.open('/geolocation')">
         <div class="top">

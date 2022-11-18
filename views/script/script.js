@@ -1,5 +1,7 @@
+import { keywords, searchResults } from './keywords.js';
+
 $(document).ready(() => {
-    
+
     $("#post-form-domain").on("submit", (event) => {
         event.preventDefault();
         const value = $("#domain").val();
@@ -99,6 +101,30 @@ $(document).ready(() => {
                 $("#error-flash-words").html(`${res.error}`);
                 $("#result-area").html(`${res.result} words`);
             }
+        });
+    });
+
+    // Search Bar
+
+    $("#search-form").on("submit", async (event) => {
+        event.preventDefault();
+
+        let value = $("#search").val();
+        if(value == "") value = null;
+
+        keywords().then(data => {
+            for (let i = 0; i <= data.length; i++) {
+                if (data[i].includes(value.toLowerCase())) return searchResults(data[i]).then(info => {
+                    $("#tool-link").html(`${info}`);
+                    $("#tool-link").attr('href', `/${info.toLowerCase().replace(" ", "-")}`);
+                }).catch(err => {
+                    $("#tool-link").html(`No Results`);
+                    $("#tool-link").attr('href', `#`);
+                })
+            }
+        }).catch(err => {
+            $("#tool-link").html(`No Results`);
+            $("#tool-link").attr('href', `#`);
         });
     });
 });
