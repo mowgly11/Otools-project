@@ -1,4 +1,4 @@
-import { keywords, searchResults } from './keywords.js';
+import { searchResults } from './keywords.js';
 
 $(document).ready(() => {
 
@@ -110,21 +110,15 @@ $(document).ready(() => {
         event.preventDefault();
 
         let value = $("#search").val();
-        if(value == "") value = null;
-
-        keywords().then(data => {
-            for (let i = 0; i <= data.length; i++) {
-                if (data[i].includes(value.toLowerCase())) return searchResults(data[i]).then(info => {
-                    $("#tool-link").html(`${info}`);
-                    $("#tool-link").attr('href', `/${info.toLowerCase().replace(" ", "-")}`);
-                }).catch(err => {
-                    $("#tool-link").html(`No Results`);
-                    $("#tool-link").attr('href', `#`);
-                })
-            }
-        }).catch(err => {
+        if (value == "") value = null;
+        
+        try {
+            const searchValue = await searchResults(value);
+            $("#tool-link").html(`${searchValue}`);
+            $("#tool-link").attr('href', `/${searchValue.toLowerCase().replace(" ", "-")}`);
+        } catch (err) {
             $("#tool-link").html(`No Results`);
             $("#tool-link").attr('href', `#`);
-        });
+        }
     });
 });

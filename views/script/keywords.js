@@ -1,19 +1,3 @@
-export function keywords() {
-    return new Promise((res, rej) => {
-        res([
-            "random",
-            "bytes",
-            "domain",
-            "reverse",
-            "ip",
-            "text",
-            "location",
-            "counter",
-            "words",
-        ]);
-    })
-}
-
 export function searchResults(keyword) {
     let results = ["Domain Checker", "Geolocation", "Random Bytes", "Text Reverse", "Words Counter"];
     return new Promise((res, rej) => {
