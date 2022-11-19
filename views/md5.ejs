@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./script/script.js" defer></script>
+</head>
+
+<body>
+  <h1>MD5 Hashing</h1>
+  <p id="error-flash-md5">
+    <%= error %>
+  </p>
+  <form id="post-form-md5" action="/md5-hash" method="POST">
+    <label for="md5">MD5 Hashing</label>
+    <input type="text" id="md5" name="md5" required>
+    <button type="submit">Generate</button>
+  </form><br><br>
+
+  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"><%= result %></textarea>
+</body>
+
+</html>

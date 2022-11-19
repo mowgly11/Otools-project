@@ -1,5 +1,3 @@
-import { searchResults } from './keywords.js';
-
 $(document).ready(() => {
 
     $("#post-form-domain").on("submit", (event) => {
@@ -104,21 +102,23 @@ $(document).ready(() => {
         });
     });
 
-    // Search Bar
-
-    $("#search-form").on("submit", async (event) => {
+    $("#post-form-md5").on("submit", (event) => {
         event.preventDefault();
+        const value = $("#md5").val();
 
-        let value = $("#search").val();
-        if (value == "") value = null;
-        
-        try {
-            const searchValue = await searchResults(value);
-            $("#tool-link").html(`${searchValue}`);
-            $("#tool-link").attr('href', `/${searchValue.toLowerCase().replace(" ", "-")}`);
-        } catch (err) {
-            $("#tool-link").html(`No Results`);
-            $("#tool-link").attr('href', `#`);
-        }
+        $.ajax({
+            url: "/md5-hash",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                md5: value
+            }),
+            success: (res) => {
+                $("#error-flash-md5").html(`${res.error}`);
+                $("#result-area").html(`${res.result}`);
+            }
+        });
     });
+
+    // Search Bar
 });

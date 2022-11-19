@@ -9,7 +9,27 @@
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f334197832.js" crossorigin="anonymous"></script>
-  <script type="module" src="./script/script.js" defer></script>
+  <script type="module" defer>
+    import {
+      searchResults
+    } from './keywords.js';
+
+    $("#search-form").on("submit", async (event) => {
+      event.preventDefault();
+
+      let value = $("#search").val();
+      if (value == "") value = null;
+
+      try {
+        const searchValue = await searchResults(value);
+        $("#tool-link").html(`${searchValue}`);
+        $("#tool-link").attr('href', `/${searchValue.toLowerCase().replace(" ", "-")}`);
+      } catch (err) {
+        $("#tool-link").html(`No Results`);
+        $("#tool-link").attr('href', `#`);
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -74,6 +94,14 @@
         </div>
         <div class="bottom">
           <a href="/words-counter">Words Counter</a>
+        </div>
+      </div>
+      <div class="card" onclick="window.open('/md5-hash')">
+        <div class="top">
+          <i class="fa-brands fa-slack"></i>
+        </div>
+        <div class="bottom">
+          <a href="/md5-hash">MD5 Hash</a>
         </div>
       </div>
     </div>
