@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(to top, var(--color-1), var(--color-2));
+    background: var(--color-2);
     height: 100vh;
 }
 
@@ -94,6 +94,7 @@ body {
     text-decoration: none;
     color: var(--color-3);
     transition: 0.5s;
+    font-weight: 700;
 }
 
 .bottom a:hover {
