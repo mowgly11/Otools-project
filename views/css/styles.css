@@ -62,7 +62,7 @@ body {
 }
 
 .card {
-    background: linear-gradient(to top, var(--color-1), var(--color-2));
+    background: var(--color-2);
     display: flex;
     align-items: center;
     flex-direction: column;

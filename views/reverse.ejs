@@ -12,16 +12,14 @@
 
 <body>
   <h1>Text Reverse</h1>
-  <p id="error-flash-reverse">
-    <%= error %>
-  </p>
+  <p id="error-flash-reverse"></p>
   <form id="post-form-reverse" action="/text-reverse" method="POST">
     <label for="reverse">Text Reverse</label>
     <textarea style="resize: none; cursor: text;" type="text" id="reverse" name="reverse" required></textarea>
     <button type="submit">Reverse</button>
   </form><br><br>
 
-  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"><%= result %></textarea>
+  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"></textarea>
 </body>
 
 </html>

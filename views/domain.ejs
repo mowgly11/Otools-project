@@ -12,7 +12,7 @@
 
 <body>
   <h1>Domain Checker</h1>
-  <p id="error-flash-domain"><%= error %></p>
+  <p id="error-flash-domain"></p>
   <form action="/domain-checker" method="POST" id="post-form-domain">
     <label for="domain">Domain</label>
     <input type="text" name="domain" id="domain" required>
@@ -20,12 +20,12 @@
   </form><br><br>
 
   <div id="result-area">
-    <p id="res1"><%= domainName %></p>
-    <p id="res2"><%= creationDate %></p>
-    <p id="res3"><%= expirationDate %></p>
-    <p id="res4"><%= provider %></p>
-    <p id="res5"><%= providerURL %></p>
-    <p id="res6"><%= registryId %></p>
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <p id="res4"></p>
+    <p id="res5"></p>
+    <p id="res6"></p>
   </div>
 </body>
 

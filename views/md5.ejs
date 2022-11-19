@@ -12,16 +12,14 @@
 
 <body>
   <h1>MD5 Hashing</h1>
-  <p id="error-flash-md5">
-    <%= error %>
-  </p>
+  <p id="error-flash-md5"></p>
   <form id="post-form-md5" action="/md5-hash" method="POST">
     <label for="md5">MD5 Hashing</label>
     <input type="text" id="md5" name="md5" required>
     <button type="submit">Generate</button>
   </form><br><br>
 
-  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"><%= result %></textarea>
+  <textarea disabled style="resize: none; cursor: text;" name="result-area" id="result-area" cols="50" rows="10"></textarea>
 </body>
 
 </html>

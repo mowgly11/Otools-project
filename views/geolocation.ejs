@@ -12,7 +12,7 @@
 
 <body>
   <h1>IP Checker</h1>
-  <p id="error-flash-ip"><%= error %></p>
+  <p id="error-flash-ip"></p>
   <form action="/geolocation" method="POST" id="post-form-ip">
     <label for="ip">ip</label>
     <input type="text" name="ip" id="ip" required>
@@ -20,12 +20,12 @@
   </form><br><br>
 
   <div id="result-area">
-    <p id="res1-ip"><%= ip %></p>
-    <p id="res2-ip"><%= country %></p>
-    <p id="res3-ip"><%= continent %></p>
-    <p id="res4-ip"><%= latitude %></p>
-    <p id="res5-ip"><%= longitude %></p>
-    <a id="res6-ip" href="<%= googleMap %>">Show On Google Maps</a>
+    <p id="res1-ip"></p>
+    <p id="res2-ip"></p>
+    <p id="res3-ip"></p>
+    <p id="res4-ip"></p>
+    <p id="res5-ip"></p>
+    <a id="res6-ip" href="#">Show On Google Maps</a>
   </div>
 
 </body>

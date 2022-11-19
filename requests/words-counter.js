@@ -3,7 +3,7 @@ module.exports = {
     run: (req, res) => {
         delete require.cache[require.resolve("../views/wordscount.ejs")];
 
-        res.render("wordscount.ejs", { error: "", result: "" });
+        res.render("wordscount.ejs");
     },
 
     run2: async (req, res) => {

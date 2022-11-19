@@ -55,13 +55,13 @@ $(document).ready(() => {
                 ip: value
             }),
             success: (res) => {
-                $("#error-flash-ip").html(`${res.error}`);
-                $("#res1-ip").html(`IP: ${res.ip}`);
-                $("#res2-ip").html(`Country: ${res.country}`);
-                $("#res3-ip").html(`Continent: ${res.continent}`);
-                $("#res4-ip").html(`latitude: ${res.latitude}`);
-                $("#res5-ip").html(`longitude: ${res.longitude}`);
-                $("#res6-ip").attr("href", res.googleMap);
+                $("#error-flash-ip").html(`${res.error ?? ""}`);
+                $("#res1-ip").html(`IP: ${res.ip ?? ""}`);
+                $("#res2-ip").html(`Country: ${res.country ?? ""}`);
+                $("#res3-ip").html(`Continent: ${res.continent ?? ""}`);
+                $("#res4-ip").html(`latitude: ${res.latitude ?? ""}`);
+                $("#res5-ip").html(`longitude: ${res.longitude ?? ""}`);
+                $("#res6-ip").attr("href", res.googleMap ?? "#");
             }
         });
     });

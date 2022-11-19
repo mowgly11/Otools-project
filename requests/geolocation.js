@@ -9,12 +9,6 @@ module.exports = {
             satelize.satelize({ ip: req.ip }, (err, payload) => {
                 if (err) return res.render("geolocation.ejs", {
                     error: "An Error Just Happened." + err,
-                    ip: "",
-                    country: "",
-                    continent: "",
-                    latitude: "",
-                    longitude: "",
-                    googleMap: "#"
                 });
 
                 res.render("geolocation.ejs", {
@@ -31,10 +25,10 @@ module.exports = {
             return res.render("geolocation.ejs", {
                 error: "",
                 ip: "Your IP: ipv6",
-                country: "ipv6",
-                continent: "ipv6",
-                latitude: "ipv6",
-                longitude: "ipv6",
+                country: "",
+                continent: "",
+                latitude: "",
+                longitude: "",
                 googleMap: "#"
             });
         }
@@ -48,12 +42,6 @@ module.exports = {
             }, (err, payload) => {
                 if (err) return res.send({
                     error: "An Error Just Happened." + err,
-                    ip: "",
-                    country: "",
-                    continent: "",
-                    latitude: "",
-                    longitude: "",
-                    googleMap: "#"
                 });
 
                 res.send({
@@ -70,11 +58,6 @@ module.exports = {
             return res.send({
                 error: "",
                 ip: "ipv6",
-                country: "",
-                continent: "",
-                latitude: "",
-                longitude: "",
-                googleMap: "#"
             });
         }
     }

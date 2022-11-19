@@ -3,7 +3,7 @@ module.exports = {
     run: (req, res) => {
         delete require.cache[require.resolve("../views/reverse.ejs")];
 
-        res.render("reverse.ejs", { error: "", result: "" });
+        res.render("reverse.ejs");
     },
 
     run2: async (req, res) => {

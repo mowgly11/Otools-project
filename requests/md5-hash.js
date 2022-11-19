@@ -5,7 +5,7 @@ module.exports = {
     run: (req, res) => {
         delete require.cache[require.resolve("../views/md5.ejs")];
 
-        res.render("md5.ejs", { error: "", result: "" });
+        res.render("md5.ejs");
     },
 
     run2: async (req, res) => {

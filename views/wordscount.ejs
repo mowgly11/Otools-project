@@ -12,16 +12,14 @@
 
 <body>
   <h1>Words Counter</h1>
-  <p id="error-flash-words">
-    <%= error %>
-  </p>
+  <p id="error-flash-words"></p>
   <form id="post-form-words" action="/words-counter" method="POST">
     <label for="words">Random Bytes</label>
     <textarea name="words" id="words" cols="30" rows="5" style="resize: none; cursor: text;"></textarea>
     <button type="submit">Count</button>
   </form><br><br>
 
-  <h2 id="result-area"><%= result %></h2>
+  <h2 id="result-area"></h2>
 </body>
 
 </html>

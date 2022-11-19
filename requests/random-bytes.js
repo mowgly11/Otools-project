@@ -5,7 +5,7 @@ module.exports = {
     run: (req, res) => {
         delete require.cache[require.resolve("../views/random.ejs")];
 
-        res.render("random.ejs", { error: "", randoms: "" });
+        res.render("random.ejs");
     },
 
     run2: async (req, res) => {
