@@ -119,4 +119,28 @@ $(document).ready(() => {
             }
         });
     });
+
+    $("#post-form-ssl").on("submit", (event) => {
+        event.preventDefault();
+        const value = $("#ssl").val();
+
+        $.ajax({
+            url: "/ssl-checker",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                ssl: value
+            }),
+            success: (res) => {
+                $("#error-flash-ssl").html(`${res.error}`);
+                if (res.error == "") {
+                    $("#res1").html(`daysRemaining: ${res.daysRemaining}`);
+                    $("#res2").html(`valid: ${res.valid}`);
+                    $("#res3").html(`validFrom: ${res.validFrom}`);
+                    $("#res4").html(`validTo: ${res.validTo}`);
+                    $("#res5").html(`validFor: ${res.validFor}`);
+                }
+            }
+        });
+    });
 });

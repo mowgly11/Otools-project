@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSL Checker</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./script/script.js" defer></script>
+</head>
+
+<body>
+  <h1>SSL Checker</h1>
+  <p id="error-flash-ssl"></p>
+  <form action="/ssl-checker" method="POST" id="post-form-ssl">
+    <label for="ssl">SSL</label>
+    <input type="text" name="ssl" id="ssl" required>
+    <button type="submit">Search</button>
+  </form><br><br>
+
+  <div id="result-area">
+    <p id="res1"></p>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <p id="res4"></p>
+    <p id="res5"></p>
+  </div>
+</body>
+
+</html>
