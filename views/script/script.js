@@ -119,6 +119,4 @@ $(document).ready(() => {
             }
         });
     });
-
-    // Search Bar
 });
